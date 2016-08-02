@@ -1,0 +1,109 @@
+\documentclass[10pt]{beamer}
+
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx,float,subfigure,caption}
+\graphicspath{{figures/}}
+\usepackage{amsmath,amssymb}
+\usepackage{ulem}
+\usepackage{xmpmulti} % for .png sequence of .gif
+\usepackage{animate} % for animation of .png sequence of .gif
+
+\newcommand{\handoutgap}[1]{\invisible<0| handout:1->{#1}} %blank in handout
+
+\newlength\dlf
+\newcommand\alignedbox[2]{ %boxed answer that breaks across &s
+	% #1 = before alignment
+	% #2 = after alignment
+	&
+	\begingroup
+	\settowidth\dlf{$\displaystyle #1$}
+	\addtolength\dlf{\fboxsep+\fboxrule}
+	\hspace{-\dlf}
+	\boxed{#1 #2}
+	\endgroup
+	}
+
+\newcommand{\eiintertext}[1]{\medskip\par\rlap{#1}\medskip} %intertext for itemize & enumerate environments
+
+\usefonttheme[onlymath]{serif} %math appears in serif font
+
+\setbeameroption{show notes}
+
+%\setlength{\parindent}{4em}
+\setlength{\parskip}{10pt}
+
+% math commands
+\newcommand{\bu}{\mathbf{u}}
+
+\begin{document}
+	
+	\title{Git Test}
+	\frame{\titlepage}
+	
+
+\begin{frame}{First frame}
+
+\begin{minipage}{.5\textwidth}
+	\begin{itemize}
+		\item line 1
+		\item line 2
+	\end{itemize}
+\end{minipage}
+\begin{minipage}{.4\textwidth}
+	line 3
+\end{minipage}
+
+\end{frame}
+
+%	\begin{frame}{Kinematics}
+%		\begin{definition}[Kinematics]
+%			\handoutgap{The study of classical mechanics which describes the motion of points, bodies, and systems of bodies while \emph{neglecting} the causes of motion.}
+%		\end{definition}
+%	\end{frame}
+%		\note{\begin{itemize}
+%				\item right now, we'll ignore the ``causes of motion'' part, but it'll be necessary later
+%			\end{itemize}}
+%			
+%	\begin{frame}{Scalars and vectors}
+%		Consider the following: an object travels \SI{7}{\meter} from its initial position. It first moves \SI{4}{\meter} east, then \SI{3}{\meter} north.
+%		\begin{itemize}
+%			\pause \item \textbf{Distance}: \handoutgap{length of path} = \SI{4}{\meter} + \SI{3}{\meter} = \SI{7}{\meter}
+%			\begin{itemize}
+%				\pause \item Scalar: magnitude \emph{only}
+%			\end{itemize}
+%			\pause \item \textbf{Displacement}: \handoutgap{change in position} = \SI{5}{\meter}, $\arctan\left(\frac{3}{4}\right)$ radians north of east
+%			\begin{itemize}
+%				\pause \item Vector: magnitude \emph{and} direction
+%			\end{itemize}
+%		\end{itemize}
+%	\end{frame}
+%		\note{\begin{itemize}
+%				\item we often use scalars and vectors, to assign numerical meaning to physical quantities
+%				\item think of magnitude as the \emph{raw numerical value} of some quantity
+%			\end{itemize}}
+%	
+%	\begin{frame}{Examples of vectors and scalars}
+%		\begin{columns}
+%			\column[]{.5\textwidth}
+%				Vectors
+%				\begin{itemize}
+%					\item \handoutgap{Momentum}
+%					\item \handoutgap{Force}
+%					\item \handoutgap{Torque}
+%					\item \handoutgap{Velocity}
+%				\end{itemize}
+%			\column[]{.5\textwidth}
+%				Scalars
+%				\begin{itemize}
+%					\item \handoutgap{Power}
+%					\item \handoutgap{Mass}
+%					\item \handoutgap{Temperature}
+%					\item \handoutgap{Speed}
+%				\end{itemize}
+%		\end{columns}
+%	\end{frame}
+%		\note{\begin{itemize}
+%				\item notice that velocity is a vector, while speed a scalar --- this is the common convention we will use
+%			\end{itemize}}
+\end{document}
